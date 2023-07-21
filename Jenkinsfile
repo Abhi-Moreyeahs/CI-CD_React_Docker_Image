@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Checkout the code from GitHub
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Abhi-Moreyeahs/CI-CD_React_Docker_Image/.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Abhi-Moreyeahs/CI-CD_React_Docker_Image.git']]])
 
                 // Build the Docker image
                 script {
