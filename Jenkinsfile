@@ -21,17 +21,17 @@ pipeline {
                 }
 
                 // Build and tag the Docker images
-                sh "docker-compose -f docker-compose.yml build"
+                sh ('docker-compose -f docker-compose.yml build')
 
                 // Push the Docker images to your Docker registry (replace with your registry URL)
-                sh "docker-compose -f docker-compose.yml push"
+                sh ('docker-compose -f docker-compose.yml push')
             }
         }
 
         stage('Deploy') {
             steps {
                 // Deploy the Docker Compose stack
-                sh "docker-compose -f docker-compose.yml up -d"
+                sh ('docker-compose -f docker-compose.yml up -d')
             }
         }
     }
