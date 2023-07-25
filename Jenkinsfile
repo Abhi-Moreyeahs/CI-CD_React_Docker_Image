@@ -16,8 +16,8 @@ pipeline {
         stage('Build and Push Docker Images') {
             steps {
                 // Login to your Docker registry (replace with your credentials)
-                withCredentials([usernamePassword(credentialsId: '0b258102-2cf5-4ddd-bd92-f55cefd11e12', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                    sh ('docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD')
+                withCredentials([usernamePassword(credentialsId: '0b258102-2cf5-4ddd-bd92-f55cefd11e12')]) {
+                    sh ('docker login -u abhishekkr3110 -p MoreYeahs@3110')
                 }
 
                 // Build and tag the Docker images
